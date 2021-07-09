@@ -1,5 +1,5 @@
 - 👋 Hi, I’m Patrick Emery Toutchet
-- 👀 I’m interested in web development mainly Php Laravel
+- 👀 I’m a PHP web developer, prefered framework => Laravel
 - 🌱 I’m currently learning JS stacks: vue.js and Flutter
 - 💞️ I’m looking to collaborate on remote projects and open source projects
 - 📫 How to reach me: mail - toutchetpatrick@gmail.com
