@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta name="keywords" content="HTML5 Template Kono onepage themeforest" />
+        <meta name="description" content="Kono - Onepage Multi-Purpose HTML5 Template" />
+        <meta name="author" content="" />
+       
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="img/favicon.ico" />
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,600,700&amp;display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&amp;display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&amp;display=swap"
+            rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&amp;display=swap" rel="stylesheet">
+
+        <!-- Plugins -->
+        <link rel="stylesheet" href="assets/css/plugins.css" />
+
+        <!-- Core Style Css -->
+        <link rel="stylesheet" href="assets/css/style.css" />
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+    <body class="dark">
+    <div id="preloader">
+        <div class="loading-text">Loading</div>
+        </div> 
+        
+
+         <!--  Start progress-scroll-button  -->
+
+        <div class="progress-wrap">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+            </svg>
+        </div>
+
+        <!-- End progress-scroll-button  -->
+
+        {{ include('includes/navigation.html.twig') }}
+
+        <!-- End Navgition -->
+
+        <div class="wrapper">
+            {% block body %}{% endblock %}
+        </div>
+
+        {{ include('includes/footer.html.twig') }}
+        
+        {% block scripts %}{% endblock %}
+    </body>
+</html>
